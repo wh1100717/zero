@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-// import styles from './index.css'
-// import withStyles from '../../decorators/withStyles'
+import styles from './index.css'
+import withStyles from '../../decorators/withStyles'
 import { Datepicker, message } from 'antd'
 
-// @withStyles(styles)
+@withStyles(styles)
 export default class Notebook extends Component {
   constructor (props) {
     super(props)
@@ -21,7 +21,7 @@ export default class Notebook extends Component {
   }
   render() {
     return (
-      <div style={{width: 400, margin: '100px auto'}}>
+      <div id="notebook" style={{width: 400, margin: '100px auto'}}>
         <Datepicker onSelect={::this._handleChange} />
         <div style={{marginTop: 20}}>当前日期：{this.state.date.toString()}</div>
       </div>

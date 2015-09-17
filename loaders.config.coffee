@@ -17,26 +17,26 @@ module.exports = [
     test: /\.(js|jsx)$/
     loaders: ['react-hot', 'babel']
     exclude: /node_modules/
-    include: __dirname
+  }, {
+    test: /\.css?$/
+    loaders: ['style-loader/useable', 'css-loader', 'postcss-loader']
+    exclude: /node_modules/
   }, {
     test: /\.css?$/
     loaders: ['style', 'raw']
-    include: __dirname
+    include: /node_modules/
   }, {
     test: /\.less?$/
     loader: 'style!css!less'
     exclude: /node_modules/
-    include: __dirname
   }, {
     test: /\.styl$/
     loader: 'style-loader!css-loader!stylus-loader'
     exclude: /node_modules/
-    include: __dirname
   }, {
     test: /\.(txt|data)$/
     loaders: ['raw']
     exclude: /node_modules/
-    include: __dirname
   }, {
     test: /\.woff(\?v=\d+\.\d+\.\d+)?$/
     loader: 'url?limit=10000&mimetype=application/font-woff'
