@@ -1,0 +1,10 @@
+doctype html
+html(lang="en")
+    head
+        title #{config.title ? config.title : "Demo"}
+        meta(name="viewport", content="")
+        meta(charset="utf-8")
+        meta(http-equiv="content-type", content="text/html;charset=UTF-8")
+    body
+        block content
+        script(src='#{config.base}app.js')
