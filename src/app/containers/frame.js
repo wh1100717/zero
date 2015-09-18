@@ -1,3 +1,4 @@
+import 'normalize.css/normalize.css'
 import '../libs/rfontawesome/index.less'
 
 import React, { Component, PropTypes } from 'react'
@@ -27,7 +28,7 @@ class Frame extends Component {
     return (
       <div id='frame'>
         <Notebook editors={editors}/>
-        <Preview />
+        <Preview editors={editors}/>
       </div>
     )
   }

@@ -1,4 +1,3 @@
-
 import React, { Component, PropTypes } from 'react'
 import 'codemirror/lib/codemirror.css'
 import * as codemirror from 'codemirror'
@@ -38,7 +37,7 @@ export default class Editor extends Component {
   render() {
     const { value } = this.props
     return (
-      <div>
+      <div className='editor'>
         <textarea ref='editor' defaultValue={value} autoComplete='off'>
         </textarea>
       </div>
