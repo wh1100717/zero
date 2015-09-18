@@ -1,8 +1,8 @@
 import '../libs/rfontawesome/index.less'
 
-import React, {Component} from 'react'
-import {bindActionCreators} from 'redux'
-import {connect} from 'react-redux'
+import React, { Component, PropTypes } from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 
 import styles from './frame.css'
 import withStyles from '../decorators/withStyles'
@@ -15,13 +15,18 @@ const Actions = {}
 @withStyles(styles)
 class Frame extends Component {
 
+  static PropTypes = {
+    editors: PropTypes.array
+  }
+
   componentDidMount () {
   }
 
   render () {
+    const {editors} = this.props
     return (
       <div id='frame'>
-        <Notebook />
+        <Notebook editors={editors}/>
         <Preview />
       </div>
     )
@@ -30,7 +35,7 @@ class Frame extends Component {
 
 function mapState (state) {
   return {
-    // isLoading: state.isLoading,
+    editors: state.app.editors
   }
 }
 
