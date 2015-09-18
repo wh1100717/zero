@@ -3,8 +3,10 @@ import styles from './index.css'
 import withStyles from '../../decorators/withStyles'
 import { Datepicker, message } from 'antd'
 
+import NBToolbar from './nbToolbar'
+
 @withStyles(styles)
-export default class Notebook extends Component {
+export default class Preview extends Component {
   constructor (props) {
     super(props)
   }
@@ -21,7 +23,8 @@ export default class Notebook extends Component {
   }
   render() {
     return (
-      <div id="notebook" style={{width: 400, margin: '100px auto'}}>
+      <div id="notebook">
+        <NBToolbar />
         <Datepicker onSelect={::this._handleChange} />
         <div style={{marginTop: 20}}>当前日期：{this.state.date.toString()}</div>
       </div>

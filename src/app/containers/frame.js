@@ -2,10 +2,16 @@ import React, {Component} from 'react'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 
+import styles from './frame.css'
+import withStyles from '../decorators/withStyles'
+
+import Toolbar from '../components/toolbar'
 import Notebook from '../components/notebook'
+import Preview from '../components/preview'
 
 const Actions = {}
 
+@withStyles(styles)
 class Frame extends Component {
 
   componentDidMount () {
@@ -13,8 +19,9 @@ class Frame extends Component {
 
   render () {
     return (
-      <div>
+      <div id='frame'>
         <Notebook />
+        <Preview />
       </div>
     )
   }
