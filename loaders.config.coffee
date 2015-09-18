@@ -27,11 +27,10 @@ module.exports = [
     include: /node_modules/
   }, {
     test: /\.less?$/
-    loader: 'style!css!less'
-    exclude: /node_modules/
+    loader: 'style!css!less',
   }, {
     test: /\.styl$/
-    loader: 'style-loader!css-loader!stylus-loader'
+    loaders: ['style-loader/useable', 'css-loader', 'postcss-loader', 'stylus-loader']
     exclude: /node_modules/
   }, {
     test: /\.(txt|data)$/

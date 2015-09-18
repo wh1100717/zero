@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styles from './index.css'
+import styles from './index.styl'
 import withStyles from '../../../decorators/withStyles'
 
 @withStyles(styles)
@@ -12,7 +12,9 @@ export default class NBToolbar extends Component {
   render() {
     return (
       <div id="NBToolbar">
-        This is NBToolbar
+        <i className="fa fa-italic"></i>
+        <i className="fa fa-link"></i>
+        <i className="fa fa-th-large"></i>
       </div>
     )
   }

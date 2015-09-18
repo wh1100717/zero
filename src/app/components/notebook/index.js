@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styles from './index.css'
+import styles from './index.styl'
 import withStyles from '../../decorators/withStyles'
 import { Datepicker, message } from 'antd'
 

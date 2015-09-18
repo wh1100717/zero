@@ -1,3 +1,5 @@
+import '../libs/rfontawesome/index.less'
+
 import React, {Component} from 'react'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
@@ -5,7 +7,6 @@ import {connect} from 'react-redux'
 import styles from './frame.css'
 import withStyles from '../decorators/withStyles'
 
-import Toolbar from '../components/toolbar'
 import Notebook from '../components/notebook'
 import Preview from '../components/preview'
 
