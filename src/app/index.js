@@ -31,10 +31,6 @@ class App extends React.Component {
         <ReactRedux.Provider store={store}>
           {() => <Frame />}
         </ReactRedux.Provider>
-        <ReactDevTools.DebugPanel top right bottom>
-          <ReactDevTools.DevTools store={store}
-              monitor={ReactDevTools.LogMonitor} />
-        </ReactDevTools.DebugPanel>
       {/*
         <ReactDevTools.DebugPanel top right bottom>
           <ReactDevTools.DevTools store={store}
