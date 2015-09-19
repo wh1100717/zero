@@ -13,11 +13,11 @@ export default class Preview extends Component {
   componentWillMount () {
   }
   render() {
-    const { editors } = this.props
+    const { editors, syncEditor } = this.props
 
     const editorDOM = []
     for (const editor of editors) {
-      editorDOM.push(<Editor value={editor.value} type={editor.type}/>)
+      editorDOM.push(<Editor value={editor.value} type={editor.type} index={editor.index} syncEditor={syncEditor}/>)
     }
 
     return (

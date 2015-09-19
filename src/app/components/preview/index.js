@@ -13,9 +13,15 @@ export default class Notebook extends Component {
   }
   componentWillMount () {
   }
+  componentWillUpdate () {
+    const { editors } = this.props
+    console.log("lalalalal")
+    console.log(editors)
+  }
   render() {
     const { editors } = this.props
     const previewDOM = []
+    console.log(editors)
     for (const editor of editors) {
       if (editor.type === 'markdown') {
         previewDOM.push(<PVMarkdown value={editor.value}/>)

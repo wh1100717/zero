@@ -11,7 +11,8 @@ import withStyles from '../decorators/withStyles'
 import Notebook from '../components/notebook'
 import Preview from '../components/preview'
 
-const Actions = {}
+import * as Actions from '../actions/app'
+
 
 @withStyles(styles)
 class Frame extends Component {
@@ -20,14 +21,16 @@ class Frame extends Component {
     editors: PropTypes.array
   }
 
-  componentDidMount () {
+  constructor (props, context) {
+    super(props, context)
   }
 
   render () {
-    const {editors} = this.props
+    console.log(this.props)
+    const {editors, actions} = this.props
     return (
       <div id='frame'>
-        <Notebook editors={editors}/>
+        <Notebook editors={editors} syncEditor={actions.syncEditor}/>
         <Preview editors={editors}/>
       </div>
     )

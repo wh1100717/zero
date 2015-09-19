@@ -23,7 +23,7 @@ export default class Editor extends Component {
     })
   }
   componentDidMount () {
-    let { editor, type, options } = this.props
+    let { editor, type, options, index, syncEditor } = this.props
     let textareaNode = React.findDOMNode(this.refs.editor)
     options = options || {
         lineNumbers: true,
@@ -33,6 +33,9 @@ export default class Editor extends Component {
       options.mode = 'text/x-markdown'
     }
     this.editor = codemirror.fromTextArea(textareaNode, options)
+    this.editor.on('change', (cm) => {
+      syncEditor(index, type, cm.getDoc().getValue())
+    })
   }
   render() {
     const { value } = this.props

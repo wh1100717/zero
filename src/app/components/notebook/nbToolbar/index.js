@@ -12,6 +12,7 @@ export default class NBToolbar extends Component {
   render() {
     return (
       <div id="NBToolbar">
+        <i className="fa fa-plus"></i>
         <i className="fa fa-italic"></i>
         <i className="fa fa-link"></i>
         <i className="fa fa-th-large"></i>

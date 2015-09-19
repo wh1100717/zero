@@ -1,6 +1,11 @@
+const types = {
+  SYNC_EDITOR: 'SYNC_Editor'
+}
+
 const initialState = {
   editors: [{
     type: 'markdown',
+    index: 0,
     value: `
 # Hello World
 
@@ -19,6 +24,7 @@ const initialState = {
 `
   }, {
     type: 'markdown',
+    index: 1,
     value: `
 # Hello World1111
 
@@ -39,7 +45,21 @@ const initialState = {
 
 export default function app (state = initialState, action) {
   switch (action.type) {
+    case types.SYNC_EDITOR:
+      return syncEditor(state, action)
     default:
       return state
   }
+}
+
+function syncEditor (state, action) {
+  let editors = state.editors
+  editors[action.index] = {
+    value: action.value,
+    type: action.markdownType
+  }
+  let newState = Object.assign({}, state, {
+    editors: [...editors]
+  })
+  return newState
 }
