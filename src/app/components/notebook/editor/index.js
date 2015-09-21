@@ -3,7 +3,7 @@ import 'codemirror/lib/codemirror.css'
 import * as codemirror from 'codemirror'
 import 'codemirror/mode/markdown/markdown'
 
-import styles from './index.styl'
+import styles from './index.scss'
 import withStyles from '../../../utils/decorators/withStyles'
 
 @withStyles(styles)

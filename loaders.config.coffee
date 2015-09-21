@@ -18,16 +18,22 @@ module.exports = [
     loaders: ['react-hot', 'babel']
     exclude: /node_modules/
   }, {
-    test: /\.css?$/
+    test: /\.css$/
     loaders: ['style-loader/useable', 'css-loader', 'postcss-loader']
     exclude: /node_modules/
   }, {
-    test: /\.css?$/
+    test: /\.css$/
     loaders: ['style', 'raw']
     include: /node_modules/
   }, {
-    test: /\.less?$/
+    test: /\.less$/
     loader: 'style!css!less',
+  }, {
+    test: /\.scss$/
+    loaders: ['style-loader/useable', 'css-loader', 'postcss-loader', 'sass-loader']
+  }, {
+    test: /\.sass$/
+    loader: 'style!css!sass?indentedSyntax'
   }, {
     test: /\.styl$/
     loaders: ['style-loader/useable', 'css-loader', 'postcss-loader', 'stylus-loader']
