@@ -1,6 +1,4 @@
-const types = {
-  SYNC_EDITOR: 'SYNC_Editor'
-}
+import * as types from '../constants/ActionTypes'
 
 export function syncEditor (index, markdownType, value) {
   return {
