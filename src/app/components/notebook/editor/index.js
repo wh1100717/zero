@@ -4,7 +4,7 @@ import * as codemirror from 'codemirror'
 import 'codemirror/mode/markdown/markdown'
 
 import styles from './index.styl'
-import withStyles from '../../../decorators/withStyles'
+import withStyles from '../../../utils/decorators/withStyles'
 
 @withStyles(styles)
 export default class Editor extends Component {

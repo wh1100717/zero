@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styles from './index.styl'
-import withStyles from '../../decorators/withStyles'
+import withStyles from '../../utils/decorators/withStyles'
 
 import NBToolbar from './nbToolbar'
 import Editor from './editor'

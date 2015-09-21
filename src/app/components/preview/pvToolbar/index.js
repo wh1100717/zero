@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styles from './index.css'
-import withStyles from '../../../decorators/withStyles'
+import withStyles from '../../../utils/decorators/withStyles'
 
 @withStyles(styles)
 export default class PVToolbar extends Component {

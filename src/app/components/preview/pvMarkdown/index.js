@@ -5,7 +5,7 @@ import marked from 'marked'
 import highlight from 'highlight.js'
 
 import styles from './index.styl'
-import withStyles from '../../../decorators/withStyles'
+import withStyles from '../../../utils/decorators/withStyles'
 
 marked.setOptions({
   gfm: true,

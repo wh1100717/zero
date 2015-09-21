@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styles from './index.styl'
-import withStyles from '../../../decorators/withStyles'
+import withStyles from '../../../utils/decorators/withStyles'
 
 @withStyles(styles)
 export default class NBToolbar extends Component {

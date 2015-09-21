@@ -1,4 +1,4 @@
-import * as types from '../constants/ActionTypes'
+import * as types from '../ActionTypes'
 
 export function syncEditor (index, markdownType, value) {
   return {

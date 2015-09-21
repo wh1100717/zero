@@ -4,7 +4,7 @@ import * as Redux from 'redux'
 import * as ReduxTools from 'redux-devtools'
 import * as ReactDevTools from 'redux-devtools/lib/react'
 import * as ReactRedux from 'react-redux'
-import * as reducers from './reducers'
+import * as reducers from './flows/reducers'
 import thunk from 'redux-thunk'
 
 import Frame from './containers/frame'

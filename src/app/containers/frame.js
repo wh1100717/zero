@@ -6,12 +6,12 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import styles from './frame.css'
-import withStyles from '../decorators/withStyles'
+import withStyles from '../utils/decorators/withStyles'
 
 import Notebook from '../components/notebook'
 import Preview from '../components/preview'
 
-import * as Actions from '../actions/app'
+import * as Actions from '../flows/actions/app'
 
 
 @withStyles(styles)
